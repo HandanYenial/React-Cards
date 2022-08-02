@@ -4,9 +4,12 @@ import React, { useState } from "react";
 import PlayingCard from "./PlayingCard";
 import "./PlayingCardList.css";
 import { useAxios } from "./hooks/useAxios";
+import { formatCard } from "./helpers";
 
 /* Renders a list of playing cards.
- * Can also add a new card at random. */
+ * Can also add a new card at random.
+or remove a card*/
+
 function CardTable() {
   const [cards, addCard, clearCards] = useAxios(
     "cards",
@@ -27,14 +30,14 @@ function CardTable() {
         <button onClick={clearCards}>Clear the table</button>
       </div>
       <div className="PlayingCardList-card-area">
-        {cards.map(cardData => (
-          <PlayingCard key={cardData.id} front={cardData.cards[0].image} />
+        {cards.map(card => (
+          <PlayingCard key={card.id} front={card.image} />
         ))}
       </div>
     </div>
   );
 }
 
-CardTable.defaultProps = {}; //
+CardTable.defaultProps = {}; 
 
 export default CardTable;
