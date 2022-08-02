@@ -7,7 +7,8 @@ function useAxios(keyInLS, baseUrl) {
   
     const addResponseData = async (formatter = data => data, restOfUrl = "") => {
       const response = await axios.get(`${baseUrl}${restOfUrl}`);
-      setResponses(data => [...data, formatter(response.data)]);
+      setResponses(data => [...data, formatter(response.data)]); //this line gives an error message
+      //when added to pokedex.js
     };
   
     const clearResponses = () => setResponses([]);
