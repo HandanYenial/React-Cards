@@ -1,9 +1,9 @@
 # React Cards
 This exercise will give you practice writing your own custom hooks. We’ve provided you with an app, but the code could use some refactoring.
 
-## Step One: Read the Code
+## Step One:
+Read the Code
 The app uses two APIs, the Deck of Cards API and the Pokemon API, to generate different types of cards on the page.
-
 Play around with the app to get a sense for how it works. Draw out the component hierarchy in your pair and make sure you understand how all of the pieces fit together.
 
 ## Step Two:
